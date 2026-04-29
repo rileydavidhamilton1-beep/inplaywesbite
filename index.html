@@ -600,79 +600,78 @@
     </h2>
     <p style="text-align:center;font-size:13.5px;color:var(--grey);margin-bottom:36px;line-height:1.6;">Full access to every pick. Cancel anytime. No lock-ins.</p>
 
+    <style>
+      .pkg-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+      .pkg-card { display:flex; flex-direction:column; justify-content:space-between; border-radius:20px; padding:22px 20px; text-decoration:none; transition:border-color .2s,transform .18s,background .2s; }
+      .pkg-card:hover { transform:translateY(-3px); }
+      .pkg-price { font-family:'Barlow Condensed',sans-serif; font-size:2.8rem; font-weight:900; line-height:1; margin-bottom:3px; }
+      .pkg-period { font-size:11px; color:var(--grey); margin-bottom:16px; }
+      .pkg-features { font-size:12px; color:var(--silver); line-height:1.8; }
+      .pkg-btn { margin-top:20px; text-align:center; padding:11px 0; border-radius:10px; font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+      @media(max-width:640px){
+        .pkg-grid { grid-template-columns:1fr; gap:10px; }
+        .pkg-card { flex-direction:row; align-items:center; padding:16px 18px; border-radius:16px; }
+        .pkg-card-left { flex:1; }
+        .pkg-card-right { display:flex; flex-direction:column; align-items:flex-end; gap:8px; flex-shrink:0; padding-left:12px; }
+        .pkg-price { font-size:2rem; }
+        .pkg-features { display:none; }
+        .pkg-period { margin-bottom:0; font-size:10px; }
+        .pkg-btn { margin-top:0; padding:9px 16px; font-size:11px; white-space:nowrap; border-radius:8px; }
+        .pkg-label { font-size:9px; margin-bottom:4px; }
+        .pkg-badge { font-size:8px !important; padding:3px 10px !important; }
+      }
+    </style>
+
     <!-- Cards grid -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+    <div class="pkg-grid">
 
       <!-- Weekly -->
-      <a href="https://whop.com/checkout/plan_ShotwpPHr8fFq" target="_blank" rel="noopener"
-         style="display:flex;flex-direction:column;justify-content:space-between;background:var(--card);border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:24px 20px;text-decoration:none;transition:border-color .2s,transform .18s,background .2s;"
-         onmouseover="this.style.borderColor='rgba(199,241,61,0.35)';this.style.background='#1a1a1a';this.style.transform='translateY(-3px)'"
-         onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='var(--card)';this.style.transform='translateY(0)'">
-        <div>
-          <div style="font-size:10px;font-weight:700;color:var(--grey);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;">Weekly</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--white);line-height:1;margin-bottom:4px;">$50</div>
-          <div style="font-size:11px;color:var(--grey);margin-bottom:18px;">per week</div>
-          <div style="font-size:12px;color:var(--silver);line-height:1.7;">
-            ✓ Full pick access<br>
-            ✓ Live alerts<br>
-            ✓ Cancel anytime
-          </div>
+      <a href="https://whop.com/checkout/plan_ShotwpPHr8fFq" target="_blank" rel="noopener" class="pkg-card"
+         style="background:var(--card);border:1px solid rgba(255,255,255,0.07);"
+         onmouseover="this.style.borderColor='rgba(199,241,61,0.35)';this.style.background='#1a1a1a';"
+         onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='var(--card)';">
+        <div class="pkg-card-left">
+          <div class="pkg-label" style="font-size:10px;font-weight:700;color:var(--grey);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;">Weekly</div>
+          <div class="pkg-price" style="color:var(--white);">$50</div>
+          <div class="pkg-period">per week</div>
+          <div class="pkg-features">✓ Full pick access<br>✓ Live alerts<br>✓ Cancel anytime</div>
         </div>
-        <div style="margin-top:22px;text-align:center;padding:10px 0;border-radius:10px;border:1px solid rgba(255,255,255,0.12);font-size:12px;font-weight:700;color:var(--silver);letter-spacing:.04em;text-transform:uppercase;">
-          Get Started →
-        </div>
+        <div class="pkg-card-right" style="display:none;"><!-- mobile right --></div>
+        <div class="pkg-btn" style="border:1px solid rgba(255,255,255,0.12);color:var(--silver);">Get Started →</div>
       </a>
 
       <!-- Monthly — highlighted -->
-      <a href="https://whop.com/checkout/plan_dx7yCOSElkxId" target="_blank" rel="noopener"
-         style="display:flex;flex-direction:column;justify-content:space-between;background:rgba(199,241,61,0.07);border:2px solid rgba(199,241,61,0.45);border-radius:20px;padding:24px 20px;text-decoration:none;position:relative;overflow:hidden;transition:border-color .2s,transform .18s,background .2s;"
-         onmouseover="this.style.borderColor='rgba(199,241,61,0.8)';this.style.background='rgba(199,241,61,0.12)';this.style.transform='translateY(-3px)'"
-         onmouseout="this.style.borderColor='rgba(199,241,61,0.45)';this.style.background='rgba(199,241,61,0.07)';this.style.transform='translateY(0)'">
-        <!-- Badge -->
-        <div style="position:absolute;top:0;right:0;background:var(--lime);color:#050505;font-size:9px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:5px 14px;border-radius:0 18px 0 12px;">Most Popular</div>
-        <div>
-          <div style="font-size:10px;font-weight:700;color:var(--lime);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;">Monthly</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--lime);line-height:1;margin-bottom:4px;">$129<span style="font-size:1.2rem;color:var(--lime);font-weight:600;opacity:.8;">.99</span></div>
-          <div style="font-size:11px;color:var(--grey);margin-bottom:18px;">per month</div>
-          <div style="font-size:12px;color:var(--silver);line-height:1.7;">
-            ✓ Full pick access<br>
-            ✓ Live alerts<br>
-            ✓ Cancel anytime
-          </div>
+      <a href="https://whop.com/checkout/plan_dx7yCOSElkxId" target="_blank" rel="noopener" class="pkg-card"
+         style="background:rgba(199,241,61,0.07);border:2px solid rgba(199,241,61,0.45);position:relative;overflow:hidden;"
+         onmouseover="this.style.borderColor='rgba(199,241,61,0.8)';this.style.background='rgba(199,241,61,0.12)';"
+         onmouseout="this.style.borderColor='rgba(199,241,61,0.45)';this.style.background='rgba(199,241,61,0.07)';">
+        <div class="pkg-badge" style="position:absolute;top:0;right:0;background:var(--lime);color:#050505;font-size:9px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:5px 14px;border-radius:0 18px 0 12px;">Most Popular</div>
+        <div class="pkg-card-left">
+          <div class="pkg-label" style="font-size:10px;font-weight:700;color:var(--lime);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;">Monthly</div>
+          <div class="pkg-price" style="color:var(--lime);">$129<span style="font-size:1.1rem;opacity:.8;">.99</span></div>
+          <div class="pkg-period">per month</div>
+          <div class="pkg-features">✓ Full pick access<br>✓ Live alerts<br>✓ Cancel anytime</div>
         </div>
-        <div style="margin-top:22px;text-align:center;padding:11px 0;border-radius:10px;background:linear-gradient(135deg,#C7F13D 0%,#39D300 100%);font-size:12px;font-weight:800;color:#050505;letter-spacing:.04em;text-transform:uppercase;">
-          Join Now →
-        </div>
+        <div class="pkg-card-right" style="display:none;"><!-- mobile right --></div>
+        <div class="pkg-btn" style="background:linear-gradient(135deg,#C7F13D 0%,#39D300 100%);color:#050505;font-weight:800;">Join Now →</div>
       </a>
 
       <!-- 3 Months -->
-      <a href="https://whop.com/checkout/plan_OJXRIJxQQ34EM" target="_blank" rel="noopener"
-         style="display:flex;flex-direction:column;justify-content:space-between;background:var(--card);border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:24px 20px;text-decoration:none;transition:border-color .2s,transform .18s,background .2s;"
-         onmouseover="this.style.borderColor='rgba(199,241,61,0.35)';this.style.background='#1a1a1a';this.style.transform='translateY(-3px)'"
-         onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='var(--card)';this.style.transform='translateY(0)'">
-        <div>
-          <div style="font-size:10px;font-weight:700;color:var(--grey);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;">3 Months</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:900;color:var(--white);line-height:1;margin-bottom:4px;">$329<span style="font-size:1.2rem;color:var(--grey);font-weight:600;">.99</span></div>
-          <div style="font-size:11px;color:var(--grey);margin-bottom:18px;">one payment</div>
-          <div style="font-size:12px;color:var(--silver);line-height:1.7;">
-            ✓ Full pick access<br>
-            ✓ Live alerts<br>
-            ✓ Best long-term rate
-          </div>
+      <a href="https://whop.com/checkout/plan_OJXRIJxQQ34EM" target="_blank" rel="noopener" class="pkg-card"
+         style="background:var(--card);border:1px solid rgba(255,255,255,0.07);"
+         onmouseover="this.style.borderColor='rgba(199,241,61,0.35)';this.style.background='#1a1a1a';"
+         onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='var(--card)';">
+        <div class="pkg-card-left">
+          <div class="pkg-label" style="font-size:10px;font-weight:700;color:var(--grey);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;">3 Months</div>
+          <div class="pkg-price" style="color:var(--white);">$329<span style="font-size:1.1rem;color:var(--grey);">.99</span></div>
+          <div class="pkg-period">one payment</div>
+          <div class="pkg-features">✓ Full pick access<br>✓ Live alerts<br>✓ Best long-term rate</div>
         </div>
-        <div style="margin-top:22px;text-align:center;padding:10px 0;border-radius:10px;border:1px solid rgba(255,255,255,0.12);font-size:12px;font-weight:700;color:var(--silver);letter-spacing:.04em;text-transform:uppercase;">
-          Get Started →
-        </div>
+        <div class="pkg-card-right" style="display:none;"><!-- mobile right --></div>
+        <div class="pkg-btn" style="border:1px solid rgba(255,255,255,0.12);color:var(--silver);">Get Started →</div>
       </a>
 
     </div>
-
-    <!-- Mobile stack override -->
-    <style>
-      @media(max-width:640px){
-        #packages .pkg-grid{grid-template-columns:1fr!important;}
-      }
-    </style>
 
   </div>
 </section>
